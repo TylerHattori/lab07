@@ -100,7 +100,7 @@ Node * pointerToMax(LinkedList *list) {
     }
 
   }
-  return temp;
+  return p;
 }
 
 // list: ptr to a linked list of Node (each with int data, and Node * next)
@@ -135,7 +135,7 @@ Node * pointerToMin(LinkedList *list) {
     }
 
   }
-  return temp;
+  return p;
 }
 
 // list: ptr to a linked list of Node (each with int data, and Node * next)
@@ -209,7 +209,7 @@ int sum(LinkedList * list) {
 
   assert(list!=NULL);
 
-  int sum = list->head->data;
+  int sum =0;
   // TODO: Insert code here to calculate and return
   //   value of pointer to max element (first one if ties.)
   Node *temp;
