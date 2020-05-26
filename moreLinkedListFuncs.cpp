@@ -24,15 +24,14 @@ void addIntToEndOfList(LinkedList *list, int value) {
     
   } else { 
     
-    Node *temp = list->head;
-    while (temp->next != NULL) temp = temp->next;
-    temp->next = p;
+    
 
     // Add p at the end of the list.   
 
     // (5) The current node at the tail? Make it point to p instead of NULL
     list->tail = p;
     // (6) Make the tail of the list be p now.
+    list->tail->next = p;
 
   }
 
@@ -88,19 +87,17 @@ Node * pointerToMax(LinkedList *list) {
   // TODO: Insert code here to calculate and return
   //   value of pointer to max element (first one if ties.)
   Node *temp;
-  Node *p;
   temp->next=list->head;
   while (temp->next != NULL)
   {
     temp = temp->next;
-    if (temp->data > max)
+    if (temp->data == largestValue(list))
     {
-      p = temp;
-      max = temp->data;
+      return temp;
     }
 
   }
-  return p;
+  return NULL;
 }
 
 // list: ptr to a linked list of Node (each with int data, and Node * next)
@@ -119,23 +116,21 @@ Node * pointerToMin(LinkedList *list) {
   assert(list!=NULL);
   assert(list->head != NULL);
 
-  int min = list->head->data;
+   int min = list->head->data;
   // TODO: Insert code here to calculate and return
   //   value of pointer to max element (first one if ties.)
   Node *temp;
-  Node *p;
   temp->next=list->head;
   while (temp->next != NULL)
   {
     temp = temp->next;
-    if (temp->data < min)
+    if (temp->data == smallestValue(list))
     {
-      p = temp;
-      min = temp->data;
+      return temp;
     }
 
   }
-  return p;
+  return NULL;
 }
 
 // list: ptr to a linked list of Node (each with int data, and Node * next)
