@@ -25,13 +25,13 @@ void addIntToEndOfList(LinkedList *list, int value) {
   } else { 
     
     
+    list->tail->next = p;
 
     // Add p at the end of the list.   
 
     // (5) The current node at the tail? Make it point to p instead of NULL
     list->tail = p;
     // (6) Make the tail of the list be p now.
-    list->tail->next = p;
 
   }
 
