@@ -81,18 +81,19 @@ Node * pointerToMax(LinkedList *list) {
   assert(list!=NULL);
   assert(list->head != NULL);
 
-  int max = list->head->data;
+  int max = largestValue(list);
   // TODO: Insert code here to calculate and return
   //   value of pointer to max element (first one if ties.)
   Node *temp;
+  temp = new Node;
   temp->next=list->head;
-  while (temp->next != NULL)
+  while (temp != NULL)
   {
-    temp = temp->next;
-    if (temp->data == largestValue(list))
+    if (temp->data == max)
     {
       return temp;
     }
+    temp = temp->next;
 
   }
   return NULL;
@@ -114,18 +115,19 @@ Node * pointerToMin(LinkedList *list) {
   assert(list!=NULL);
   assert(list->head != NULL);
 
-   int min = list->head->data;
+   int min = smallestValue(list);
   // TODO: Insert code here to calculate and return
   //   value of pointer to max element (first one if ties.)
   Node *temp;
+  temp = new Node;
   temp->next=list->head;
-  while (temp->next != NULL)
+  while (temp != NULL)
   {
-    temp = temp->next;
-    if (temp->data == smallestValue(list))
+    if (temp->data == min)
     {
       return temp;
     }
+    temp = temp->next;
 
   }
   return NULL;
@@ -148,6 +150,7 @@ int largestValue(LinkedList *list) {
   // TODO: Insert code here to calculate and return
   //   value of pointer to max element (first one if ties.)
   Node *temp;
+  temp = new Node;
   temp->next=list->head;
   while (temp->next != NULL)
   {
@@ -177,6 +180,7 @@ int smallestValue(LinkedList *list) {
   // TODO: Insert code here to calculate and return
   //   value of pointer to max element (first one if ties.)
   Node *temp;
+  temp = new Node;
   temp->next=list->head;
   while (temp->next != NULL)
   {
@@ -205,7 +209,7 @@ int sum(LinkedList * list) {
   int sum =0;
   // TODO: Insert code here to calculate and return
   //   value of pointer to max element (first one if ties.)
-  Node *temp;
+  Node *temp;temp = new Node;
   temp->next=list->head;
   while (temp->next != NULL)
   {
