@@ -43,7 +43,7 @@ void addIntToEndOfList(LinkedList *list, int value) {
 }
 
 void addIntToStartOfList(LinkedList *list, int value) {
-  assert(list!=NULL); // if list is NULL, we can do nothing.
+  /*assert(list!=NULL); // if list is NULL, we can do nothing.
   Node *p; // temporary pointer
   p = new Node;
   p->data = value;
@@ -64,7 +64,7 @@ void addIntToStartOfList(LinkedList *list, int value) {
 
     // (6) Make the tail of the list be p now.
 
-  }
+  }*/
   // Add code for this.  
   // HINTS:
   //  You will need to allocate a new Node.
