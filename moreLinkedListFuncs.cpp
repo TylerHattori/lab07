@@ -87,7 +87,7 @@ void addIntToStartOfList(LinkedList *list, int value) {
 //  earlier in the list, i.e. closer to the head
 
 Node * pointerToMax(LinkedList *list) {
-
+  /*
   // Code may assume that these assertions are true;
   //  so does not need to do error checking for these conditions.
   assert(list!=NULL);
@@ -110,6 +110,7 @@ Node * pointerToMax(LinkedList *list) {
 
   }
   return temp;
+  */return NULL;
 }
 
 // list: ptr to a linked list of Node (each with int data, and Node * next)
@@ -121,7 +122,7 @@ Node * pointerToMax(LinkedList *list) {
 
 
 Node * pointerToMin(LinkedList *list) {
-
+/*
   // Code may assume that these assertions are true;
   //  so does not need to do error checking for these conditions.
   assert(list!=NULL);
@@ -143,7 +144,7 @@ Node * pointerToMin(LinkedList *list) {
     temp->next = temp->next->next;
 
   }
-  return temp;
+  return temp;*/return NULL;
 }
 
 // list: ptr to a linked list of Node (each with int data, and Node * next)
