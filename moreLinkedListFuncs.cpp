@@ -44,27 +44,7 @@ void addIntToEndOfList(LinkedList *list, int value) {
 
 void addIntToStartOfList(LinkedList *list, int value) {
   assert(list!=NULL); // if list is NULL, we can do nothing.
-  Node *p; // temporary pointer
-  p = new Node;
-  p->data = value;
-  p->next = NULL;
 
-  if (list->head == NULL) {
-    list->head = p;
-    list->tail = p;
-    // (4) Make both head and tail of this list point to p
-    
-    
-  } else {
-    p->next=list->head;
-    list->head = p;
-    // Add p at the end of the list.   
-
-    // (5) The current node at the tail? Make it point to p instead of NULL
-
-    // (6) Make the tail of the list be p now.
-
-  }
   // Add code for this.  
   // HINTS:
   //  You will need to allocate a new Node.
@@ -87,29 +67,16 @@ void addIntToStartOfList(LinkedList *list, int value) {
 //  earlier in the list, i.e. closer to the head
 
 Node * pointerToMax(LinkedList *list) {
-  
+
   // Code may assume that these assertions are true;
   //  so does not need to do error checking for these conditions.
   assert(list!=NULL);
   assert(list->head != NULL);
 
-  int max = largestValue(list);
   // TODO: Insert code here to calculate and return
   //   value of pointer to max element (first one if ties.)
-  Node *temp;
-  temp = new Node;
-  temp->data = 42;
-  temp->next=list->head;
-  while (temp->next != NULL)
-  {
-    if (temp->next->data == max)
-    {
-      return temp->next;
-    }
-    temp->next = temp->next->next;
 
-  }
-  return temp;
+  return NULL; // STUB!  Replace this line with correct code
 }
 
 // list: ptr to a linked list of Node (each with int data, and Node * next)
@@ -124,26 +91,16 @@ Node * pointerToMin(LinkedList *list) {
 
   // Code may assume that these assertions are true;
   //  so does not need to do error checking for these conditions.
+
   assert(list!=NULL);
   assert(list->head != NULL);
 
-  int min = smallestValue(list);
   // TODO: Insert code here to calculate and return
-  //   value of pointer to max element (first one if ties.)
-  Node *temp;
-  temp = new Node;
-  temp->data = 42;
-  temp->next=list->head;
-  while (temp->next != NULL)
-  {
-    if (temp->next->data == min)
-    {
-      return temp->next;
-    }
-    temp->next = temp->next->next;
+  //   value of pointer to min element 
+  //   (first one such value that occurs if there are ties.)
 
-  }
-  return temp;
+  return NULL; // STUB!  Replace this line with correct code
+
 }
 
 // list: ptr to a linked list of Node (each with int data, and Node * next)
@@ -232,4 +189,3 @@ int sum(LinkedList * list) {
   }
   return sum;
 }
-
