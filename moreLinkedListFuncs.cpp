@@ -4,7 +4,7 @@
 
 
 
-void addIntToEndOfList(LinkedList *list, int value) {
+/*void addIntToEndOfList(LinkedList *list, int value) {
   assert(list!=NULL); // if list is NULL, we can do nothing.
 
   Node *p;
@@ -198,7 +198,7 @@ int smallestValue(LinkedList *list) {
 // Return the sum of all values in the list.
 // You may assume that list is not NULL
 // However, the list may be empty (i.e. list->head may be NULL)
-//  in which case your code should return 0.
+//  in which case your code should return 0.*/
 
 int sum(LinkedList * list) {
   // Code may assume that these assertions are true;
