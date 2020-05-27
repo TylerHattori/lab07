@@ -8,10 +8,9 @@ void addIntToEndOfList(LinkedList *list, int value) {
   assert(list!=NULL); // if list is NULL, we can do nothing.
 
   Node *p;
-  Node n;
   
-  p = &n;
-
+  p = new Node;
+  
   p->data=value;
   p->next=NULL;
 
@@ -40,8 +39,7 @@ void addIntToEndOfList(LinkedList *list, int value) {
 void addIntToStartOfList(LinkedList *list, int value) {
   assert(list!=NULL); // if list is NULL, we can do nothing.
   Node *p;
-  Node n;
-  p = &n;
+  p = new Node;
   p->data=value;
   p->next=NULL;
 
