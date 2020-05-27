@@ -1,35 +1,37 @@
+
+
 #include <cassert>
 #include "linkedList.h"
 #include "linkedListFuncs.h"
 
 
 
-/*void addIntToEndOfList(LinkedList *list, int value) {
+void addIntToEndOfList(LinkedList *list, int value) {
   assert(list!=NULL); // if list is NULL, we can do nothing.
 
-  Node *p;
+  Node *p; // temporary pointer
+
+  // TODO:
+  // (1) Allocate a new node.  p will point to it.
+
+  p = NULL; // THIS IS PLACE-HOLDER LINE OF CODE.  DELETE IT AND REPLACE IT.
+
+  // (2) Set p's data field to the value passed in
   
-  p = new Node;
-  
-  p->data=value;
-  p->next=NULL;
+  // (3) Set p's next field to NULL
 
 
   if (list->head == NULL) {
 
-    list->head = p;
-    list->tail = p;
+    // (4) Make both head and tail of this list point to p
     
     
-  } else { 
-    
-    
-    list->tail->next = p;
+  } else {
 
     // Add p at the end of the list.   
 
     // (5) The current node at the tail? Make it point to p instead of NULL
-    list->tail = p;
+
     // (6) Make the tail of the list be p now.
 
   }
@@ -38,21 +40,7 @@
 
 void addIntToStartOfList(LinkedList *list, int value) {
   assert(list!=NULL); // if list is NULL, we can do nothing.
-  Node *p;
-  p = new Node;
-  p->data=value;
-  p->next=NULL;
 
-  if (list->head == NULL) {
-
-    list->head = p;
-    list->tail = p;
-    
-    
-  } else {
-    p->next=list->head;
-    list->head = p;
-  }
   // Add code for this.  
   // HINTS:
   //  You will need to allocate a new Node.
@@ -81,22 +69,10 @@ Node * pointerToMax(LinkedList *list) {
   assert(list!=NULL);
   assert(list->head != NULL);
 
-  int max = largestValue(list);
   // TODO: Insert code here to calculate and return
   //   value of pointer to max element (first one if ties.)
-  Node *temp;
-  temp = new Node;
-  temp->next=list->head;
-  while (temp != NULL)
-  {
-    if (temp->data == max)
-    {
-      return temp;
-    }
-    temp = temp->next;
 
-  }
-  return NULL;
+  return NULL; // STUB!  Replace this line with correct code
 }
 
 // list: ptr to a linked list of Node (each with int data, and Node * next)
@@ -115,22 +91,12 @@ Node * pointerToMin(LinkedList *list) {
   assert(list!=NULL);
   assert(list->head != NULL);
 
-   int min = smallestValue(list);
   // TODO: Insert code here to calculate and return
-  //   value of pointer to max element (first one if ties.)
-  Node *temp;
-  temp = new Node;
-  temp->next=list->head;
-  while (temp != NULL)
-  {
-    if (temp->data == min)
-    {
-      return temp;
-    }
-    temp = temp->next;
+  //   value of pointer to min element 
+  //   (first one such value that occurs if there are ties.)
 
-  }
-  return NULL;
+  return NULL; // STUB!  Replace this line with correct code
+
 }
 
 // list: ptr to a linked list of Node (each with int data, and Node * next)
@@ -198,7 +164,7 @@ int smallestValue(LinkedList *list) {
 // Return the sum of all values in the list.
 // You may assume that list is not NULL
 // However, the list may be empty (i.e. list->head may be NULL)
-//  in which case your code should return 0.*/
+//  in which case your code should return 0.
 
 int sum(LinkedList * list) {
   // Code may assume that these assertions are true;
@@ -206,10 +172,11 @@ int sum(LinkedList * list) {
 
   assert(list!=NULL);
 
-  int sum =0;
+  int sum = 0;
   // TODO: Insert code here to calculate and return
   //   value of pointer to max element (first one if ties.)
-  Node *temp;temp = new Node;
+  Node *temp;
+  temp = new Node;
   temp->next=list->head;
   while (temp->next != NULL)
   {
