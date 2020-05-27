@@ -1,5 +1,3 @@
-
-
 #include <cassert>
 #include "linkedList.h"
 #include "linkedListFuncs.h"
