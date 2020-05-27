@@ -103,7 +103,7 @@ Node * pointerToMax(LinkedList *list) {
   {
     if (temp->next->data == max)
     {
-      return temp;
+      return temp->next;
     }
     temp->next = temp->next->next;
 
@@ -136,7 +136,7 @@ Node * pointerToMin(LinkedList *list) {
   {
     if (temp->next->data == min)
     {
-      return temp;
+      return temp->next;
     }
     temp->next = temp->next->next;
 
