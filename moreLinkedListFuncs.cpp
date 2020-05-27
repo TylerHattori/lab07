@@ -50,13 +50,13 @@ void addIntToStartOfList(LinkedList *list, int value) {
   p->next = NULL;
 
   if (list->head == NULL) {
-    p->next=list->head;
     list->head = p;
+    list->tail = p;
     // (4) Make both head and tail of this list point to p
     
     
   } else {
-    list->head->next = p;
+    p->next=list->head;
     list->head = p;
     // Add p at the end of the list.   
 
