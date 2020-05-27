@@ -109,7 +109,7 @@ Node * pointerToMax(LinkedList *list) {
     temp->next = temp->next->next;
 
   }
-  return NULL;
+  return temp;
 }
 
 // list: ptr to a linked list of Node (each with int data, and Node * next)
@@ -143,7 +143,7 @@ Node * pointerToMin(LinkedList *list) {
     temp->next = temp->next->next;
 
   }
-  return NULL;
+  return temp;
 }
 
 // list: ptr to a linked list of Node (each with int data, and Node * next)
